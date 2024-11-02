@@ -215,12 +215,18 @@ function hideModal() {
     document.getElementById('emailModal').style.display = 'none';
 }
 
+// Form submission handler
 document.getElementById("whitepaperForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent the default form submission
 
-    // Send the form data to FormSubmit
+    const emailInput = document.getElementById("emailInput");
+    if (!emailInput.value) {
+        alert("Please enter your email address.");
+        return;
+    }
+
     const formData = new FormData();
-    formData.append("email", document.getElementById("emailInput").value);
+    formData.append("email", emailInput.value);
     formData.append("_subject", "Whitepaper Download Request");
 
     fetch("https://formsubmit.co/e13762f9438f25e3b8aaddc98720bf90", {
