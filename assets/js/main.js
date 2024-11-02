@@ -214,3 +214,26 @@ function showModal() {
 function hideModal() {
     document.getElementById('emailModal').style.display = 'none';
 }
+
+document.getElementById("whitepaperForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Send the form data to FormSubmit
+    const form = event.target;
+    const formData = new FormData(form);
+    formData.append("_next", "https://www.valiq.com/download-page"); // Redirect URL after submission
+
+    fetch("https://formsubmit.co/e13762f9438f25e3b8aaddc98720bf90", {
+        method: "POST",
+        body: formData,
+    })
+    .then(response => {
+        if (response.ok) {
+            // Redirect to the download page after successful submission
+            window.location.href = "https://www.valiq.com/download-page";
+        } else {
+            alert("There was an error. Please try again.");
+        }
+    })
+    .catch(error => console.error("Error:", error));
+});
