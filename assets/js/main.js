@@ -207,39 +207,41 @@
 
 })(jQuery);
 
-function showModal() {
-    document.getElementById('emailModal').style.display = 'flex';
-}
 
-function hideModal() {
-    document.getElementById('emailModal').style.display = 'none';
-}
-
-// Form submission handler
-document.getElementById("whitepaperForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent the default form submission
-
-    const emailInput = document.getElementById("emailInput");
-    if (!emailInput.value) {
-        alert("Please enter your email address.");
-        return;
+document.addEventListener("DOMContentLoaded", function() {
+    function showModal() {
+        document.getElementById('emailModal').style.display = 'flex';
     }
 
-    const formData = new FormData();
-    formData.append("email", emailInput.value);
-    formData.append("_subject", "Whitepaper Download Request");
+    function hideModal() {
+        document.getElementById('emailModal').style.display = 'none';
+    }
 
-    fetch("https://formsubmit.co/e13762f9438f25e3b8aaddc98720bf90", {
-        method: "POST",
-        body: formData,
-    })
-    .then(response => {
-        if (response.ok) {
-            // Redirect to the download page after successful submission
-            window.location.href = "https://www.valiq.com/download-page";
-        } else {
-            alert("There was an error. Please try again.");
+    document.getElementById("whitepaperForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        const emailInput = document.getElementById("emailInput");
+        if (!emailInput || !emailInput.value) {
+            alert("Please enter your email address.");
+            return;
         }
-    })
-    .catch(error => console.error("Error:", error));
+
+        const formData = new FormData();
+        formData.append("email", emailInput.value);
+        formData.append("_subject", "Whitepaper Download Request");
+
+        fetch("https://formsubmit.co/e13762f9438f25e3b8aaddc98720bf90", {
+            method: "POST",
+            body: formData,
+        })
+        .then(response => {
+            if (response.ok) {
+                // Redirect to the download page after successful submission
+                window.location.href = "https://www.valiq.com/download-page";
+            } else {
+                alert("There was an error. Please try again.");
+            }
+        })
+        .catch(error => console.error("Error:", error));
+    });
 });
