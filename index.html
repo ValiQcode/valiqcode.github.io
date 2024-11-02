@@ -155,12 +155,26 @@
 						<div class="content">
 							<p>Read the <strong>whitepaper</strong> for a deep dive into our patented technologies for cryptographic security of QR codes and our secure gateways avoiding the pitfalls.</p>
 							<ul class="actions">
-								<li><a href="whitepaper.pdf" class="button primary large" target="_blank" onclick="_gaq.push(['_trackEvent','Download','PDF',this.href]);">Download the whitepaper 🎈</a></li>
+								<li><a href="whitepaper.pdf" class="button primary large" target="_blank" onclick="showModal()">Download the whitepaper 🎈</a></li>
 							</ul>
 						</div>
 					</section>
 
-				<!-- Copyright -->
+						<!-- Modal Popup for Email Capture -->
+						<div id="emailModal" class="modal" style="display:none;">
+						    <div class="modal-content">
+						        <span class="close" onclick="hideModal()">&times;</span>
+						        <h3>Enter your email to download the whitepaper</h3>
+						        <form action="https://formsubmit.co/e13762f9438f25e3b8aaddc98720bf90" method="POST">
+						            <input type="hidden" name="_next" value="https://www.valiq.com/download-page">
+						            <input type="hidden" name="_subject" value="Whitepaper Download Request">
+						            <input type="email" name="email" id="email" placeholder="Your email address" required>
+						            <button type="submit" class="button primary">Submit</button>
+						        </form>
+						    </div>
+						</div>
+
+				        <!-- Copyright -->
 					<div class="copyright">&copy; ValiQ Security GmbH. All rights reserved.</div>
 
 			</div>

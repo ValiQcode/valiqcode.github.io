@@ -206,3 +206,11 @@
 					});
 
 })(jQuery);
+
+function showModal() {
+    document.getElementById('emailModal').style.display = 'flex';
+}
+
+function hideModal() {
+    document.getElementById('emailModal').style.display = 'none';
+}
