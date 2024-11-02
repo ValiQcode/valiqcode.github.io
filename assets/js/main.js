@@ -219,9 +219,9 @@ document.getElementById("whitepaperForm").addEventListener("submit", function(ev
     event.preventDefault(); // Prevent the default form submission
 
     // Send the form data to FormSubmit
-    const form = event.target;
-    const formData = new FormData(form);
-    formData.append("_next", "https://www.valiq.com/download-page"); // Redirect URL after submission
+    const formData = new FormData();
+    formData.append("email", document.getElementById("emailInput").value);
+    formData.append("_subject", "Whitepaper Download Request");
 
     fetch("https://formsubmit.co/e13762f9438f25e3b8aaddc98720bf90", {
         method: "POST",
