@@ -214,14 +214,10 @@
 			        method: "POST",
 			        body: new FormData(document.getElementById("whitepaperForm")),
 			    })
-			    .then(response => {
-			        if (response.ok) {
-			            window.location.href = "https://www.valiq.com/download.html";
-			        } else {
-			            alert("There was an error. Please try again.");
-			        }
-			    })
 			    .catch(error => console.error("Error:", error));
+
+			    // Redirect immediately to the download page
+			    window.location.href = "https://www.valiq.com/download.html";
 			}
 			</script>
 
