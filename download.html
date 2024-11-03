@@ -8,7 +8,7 @@
 		  gtag('js', new Date());
 		  gtag('config', 'G-2ZQG4E1ME5');
 		</script>
-		<title>ValiQ Security - high-trust environments using QR codes</title>
+		<title>Whitepaper QR Code Phishing Download - ValiQ Security</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="Helping create high-trust environments using secure QR codes" />
@@ -21,7 +21,7 @@
 
 					<section class="intro">
 						<header>
-							<h1>ValiQ Security</h1>
+							<h1>Download the Whitepaper</h1>
 							<p>Helping create and sustain<br> high-trust environments<br> via QR codes</p>
 							<ul class="actions">
 								<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
@@ -87,23 +87,6 @@
 						</header>
 						<div class="content">
 							<p>Tell us what <strong>you are planning to do</strong> with QR codes and receive a free 1-hour consultation.</p>
-							<form action="https://formsubmit.co/e13762f9438f25e3b8aaddc98720bf90" method="POST">
-								<input type="hidden" name="_next" value="https://www.valiq.com/"> 
-                                                                <div class="fields">
-									<div class="field half">
-										<input type="text" name="name" id="name" placeholder="Name" />
-									</div>
-									<div class="field half">
-										<input type="email" name="email" id="email" placeholder="Email" />
-									</div>
-									<div class="field">
-										<textarea name="message" id="message" placeholder="Message" rows="7"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" class="button primary" /></li>
-								</ul>
-							</form>
 						</div>
 						<footer>
 							<ul class="items">
@@ -117,8 +100,7 @@
 								</li>
 								<li>
 									<h3>Address</h3>
-									<span>Militärstrasse 90, 8004 Zürich, Switzerland
-</span>
+									<span>Militärstrasse 90, 8004 Zürich, Switzerland</span>
 								</li>
 								<li>
 									<h3>Social & Code</h3>
@@ -153,25 +135,9 @@
 							<h2>Or research our technology further</h2>
 						</header>
 						<div class="content">
-							<p>Read the <strong>whitepaper</strong> for a deep dive into our patented technologies for cryptographic security of QR codes and our secure gateways avoiding the pitfalls.</p>
-							<ul class="actions">
-								<li><button type="button" class="button primary large" onclick="showModal()">Download the whitepaper 🎈</button></li>
-							</ul>
+							<p>Download it</p>
 						</div>
 					</section>
-
-						<!-- Modal Popup for Email Capture -->
-						<div id="emailModal" class="modal" style="display:none;">
-						    <div class="modal-content">
-						        <span class="close" onclick="hideModal()">&times;</span>
-						        <h3>Enter your email to download the whitepaper</h3>
-						        <form id="whitepaperForm">
-						            <input type="hidden" name="_subject" value="Whitepaper Download Request">
-						            <input type="email" name="email" id="emailInput" placeholder="Your email address" required>
-						            <button type="submit" class="button primary">Submit</button>
-						        </form>
-						    </div>
-						</div>
 
 				        <!-- Copyright -->
 					<div class="copyright">&copy; ValiQ Security GmbH. All rights reserved.</div>
@@ -185,51 +151,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<!-- JavaScript -->
-			<script>
-			// Function to display the modal
-			function showModal() {
-			    document.getElementById('emailModal').style.display = 'flex';
-			}
 
-			// Function to hide the modal
-			function hideModal() {
-			    document.getElementById('emailModal').style.display = 'none';
-			}
-
-			// Form submission handler
-			document.getElementById("whitepaperForm").addEventListener("submit", function(event) {
-			    event.preventDefault(); // Prevent the default form submission
-
-			    // Get the email input element and check its value
-			    const emailInput = document.getElementById("emailInput");
-
-			    if (!emailInput.value) {
-			        alert("Please enter your email address.");
-			        return;
-			    }
-
-			    // Prepare form data for submission
-  			  const formData = new FormData();
- 			   formData.append("email", emailInput.value);
- 			   formData.append("_subject", "Whitepaper Download Request");
-
- 			   // Send form data to FormSubmit and handle the response
- 			   fetch("https://formsubmit.co/e13762f9438f25e3b8aaddc98720bf90", {
- 			       method: "POST",
- 			       body: formData,
- 			   })
- 			   .then(response => {
- 			       if (response.ok) {
- 			           // Redirect to the download page after successful submission
-  			          window.location.href = "https://www.valiq.com/download.html";
-  			      } else {
-  			          alert("There was an error. Please try again.");
-  			      }
- 			   })
- 			   .catch(error => console.error("Error:", error));
-			});
-			</script>
 
 	</body>
 </html>
