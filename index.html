@@ -160,18 +160,18 @@
 						</div>
 					</section>
 
-						<!-- Modal Popup for Email Capture -->
-						<div id="emailModal" class="modal" style="display:none;">
-						    <div class="modal-content">
-						        <span class="close" onclick="hideModal()">&times;</span>
-						        <h3>Enter your email to download the whitepaper</h3>
-						        <form id="whitepaperForm">
-						            <input type="hidden" name="_subject" value="Whitepaper Download Request">
-						            <input type="email" name="email" id="emailInput" placeholder="Your email address" required>
-						            <button type="submit" class="button primary">Submit</button>
-						        </form>
-						    </div>
-						</div>
+					<!-- Modal Popup for Email Capture -->
+					<div id="emailModal" class="modal" style="display:none;">
+					    <div class="modal-content">
+					        <span class="close" onclick="hideModal()">&times;</span>
+					        <h3>Enter your email to download the whitepaper</h3>
+					        <form id="whitepaperForm" onsubmit="submitForm(event)">
+					            <input type="hidden" name="_subject" value="Whitepaper Download Request">
+					            <input type="email" name="email" id="emailInput" placeholder="Your email address" required>
+					            <button type="submit" class="button primary">Submit</button>
+					        </form>
+					    </div>
+					</div>
 
 				        <!-- Copyright -->
 					<div class="copyright">&copy; ValiQ Security GmbH. All rights reserved.</div>
