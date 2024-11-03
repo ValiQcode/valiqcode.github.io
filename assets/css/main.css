@@ -3903,3 +3903,11 @@ input, select, textarea {
     right: 10px;
     cursor: pointer;
 }
+
+#emailInput {
+    margin-bottom: 15px; /* Adjust the value as needed */
+}
+
+.button.primary {
+    margin-top: 15px; /* Adds space above the submit button */
+}
