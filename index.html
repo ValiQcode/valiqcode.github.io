@@ -206,6 +206,9 @@
 			        return;
 			    }
 
+ 			    // Close the popup immediately
+ 			    hideModal();
+
 			    // Prepare and send form data
 			    fetch("https://formsubmit.co/e13762f9438f25e3b8aaddc98720bf90", {
 			        method: "POST",
