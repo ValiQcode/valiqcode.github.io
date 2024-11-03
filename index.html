@@ -188,39 +188,38 @@
 
 
 			<script>
-function showModal() {
-    document.getElementById('emailModal').style.display = 'flex';
-}
+			function showModal() {
+			    document.getElementById('emailModal').style.display = 'flex';
+			}
 
-function hideModal() {
-    document.getElementById('emailModal').style.display = 'none';
-}
+			function hideModal() {
+			    document.getElementById('emailModal').style.display = 'none';
+			}
 
-function submitForm(event) {
-    event.preventDefault(); // Prevent default form submission
+			function submitForm(event) {
+			    event.preventDefault(); // Prevent default form submission
 
-    const emailInput = document.getElementById("emailInput");
+			    const emailInput = document.getElementById("emailInput");
 
-    if (!emailInput.value) {
-        alert("Please enter your email address.");
-        return;
-    }
+			    if (!emailInput.value) {
+			        alert("Please enter your email address.");
+			        return;
+			    }
 
-    // Prepare and send form data
-    fetch("https://formsubmit.co/e13762f9438f25e3b8aaddc98720bf90", {
-        method: "POST",
-        body: new FormData(document.getElementById("whitepaperForm")),
-    })
-    .then(response => {
-        if (response.ok) {
-            window.location.href = "https://www.valiq.com/download.html";
-        } else {
-            alert("There was an error. Please try again.");
-        }
-    })
-    .catch(error => console.error("Error:", error));
-}
-
+			    // Prepare and send form data
+			    fetch("https://formsubmit.co/e13762f9438f25e3b8aaddc98720bf90", {
+			        method: "POST",
+			        body: new FormData(document.getElementById("whitepaperForm")),
+			    })
+			    .then(response => {
+			        if (response.ok) {
+			            window.location.href = "https://www.valiq.com/download.html";
+			        } else {
+			            alert("There was an error. Please try again.");
+			        }
+			    })
+			    .catch(error => console.error("Error:", error));
+			}
 			</script>
 
 	</body>
